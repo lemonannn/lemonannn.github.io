@@ -1,5 +1,14 @@
-.background {
-    background-color: #F2EED5;
-    background-blend-mode: darken;
+body {
+    background-color: #ffffae;
     background-size: cover;
+}
+
+.headline {
+
+    .logo {
+        margin: auto;
+        display: block;
+        width: 20%;
+    }
+
 }
