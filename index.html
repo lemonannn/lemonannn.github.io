@@ -265,9 +265,6 @@
         let pageWidth = document.documentElement.scrollWidth;
         let pageHeight = document.documentElement.scrollHeight;
 
-        console.log(img.width);
-        console.log(pageWidth);
-
         if (pos_x < 0 || pos_x + img.width >= pageWidth - speed_mult) {
             x_velo *= -1; // reset to the left of screen
         }
