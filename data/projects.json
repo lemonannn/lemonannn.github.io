@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Lemonan Player Pitching Model",
+    "type": "analytics",
+    "image": "lppm.webp",
+    "link": "/analytics/lppm.html",
+    "completed": true
+  },
+  {
+    "name": "Drawn Together, Pulled Apart",
+    "type": "games",
+    "image": "dtpa.png",
+    "link": "https://rafesymonds.itch.io/drawn-together-pulled-apart",
+    "completed": true
+  },
+  {
+    "name": "The Blocks Move",
+    "type": "games",
+    "image": "tbm.png",
+    "link": "https://lemonan.itch.io/theblocksmove",
+    "completed": true
+  }
+]

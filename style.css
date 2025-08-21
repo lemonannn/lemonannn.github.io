@@ -1,14 +1,296 @@
 body {
     background-color: #ffffae;
     background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.headline {
+.headline_row {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
 
-    .logo {
-        margin: auto;
-        display: block;
-        width: 20%;
+.rotating_lemon {
+    width: 100px;   /* or a % */
+    height: auto;
+    animation-name: rotation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.logo {
+    width: 500px;
+    height: auto;
+    align-self: center;
+}
+
+#moving_lemon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+}
+
+.headline_subtext {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+}
+
+.linky_bar {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.linky_bar_text {
+    font-size: 40px;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.top_row {
+    display: flex;
+    justify-content: space-around;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.bio {
+    width: 600px;
+    padding: 20px;
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+}
+
+.quote {
+    width: 600px;
+    border: 8px solid black;
+    padding: 20px;
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+}
+
+.quote_header {
+    font-size: 24px;
+    font-style: italic;
+    align-items: flex-end;
+}
+
+.quote_header_blank {
+    text-decoration: underline;
+}
+
+.quote_header_end {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.quote_text {
+    font-size: 15px;
+    margin: 50px;
+}
+
+.quote_author {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.jacks_take {
+    width: 600px;
+    border-top: 8px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.take_header {
+    font-size: 14px;
+    font-style: italic;
+    margin: 20px;
+}
+
+.fav_bar {
+    margin: 20px;
+    width: 60%;
+    text-align: center;
+    background-color: #3C365E;
+    color: white;
+}
+
+.fav_header {
+    margin: 15px;
+    font-size: 28px;
+    font-weight: normal;
+    align-self: center;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.favs {
+    overflow-x: scroll;
+    scrollbar-color: white black;
+    white-space: nowrap;
+    display: flex;
+    width: auto;
+}
+
+.fav {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px; /* Restore font size for captions */
+    border: 2px solid #3C365E;
+}
+
+.fav img {
+    height: 400px;
+}
+
+.fav figcaption {
+    border-top: solid 2px #3C365E;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rec_projects {
+    background-color: #3C365E;
+    color: white;
+    margin: 20px;
+    width: 490px;
+    height: 200px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.rec_projects_header {
+    font-size: 28px;
+    font-weight: normal;
+    margin: 15px;
+    align-self: center;
+    font-variant: small-caps;
+}
+
+#project_list {
+    overflow-x: scroll;
+    scrollbar-color: white black;
+    white-space: nowrap;
+    display: flex;
+    width: auto;
+    scroll-snap-type: x mandatory;
+    position: relative;
+    overflow: hidden;
+}
+
+#project_list figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px; /* Restore font size for captions */
+}
+
+#project_list img {
+    width: 490px;
+    display: block;
+}
+
+#project_list figcaption {
+    border-top: solid 2px #3C365E;
+    margin: 0;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+}
+
+.carousel-btn {
+  position: absolute;
+  transform: translate(0, -200px);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.carousel-btn.left {
+  left: 80px;
+}
+
+.carousel-btn.right {
+  right: 950px;
+}
+
+footer {
+    background-color: #F0F0A3;
+    color: white;
+    text-align: center;
+}
+
+.contact_row {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.contact_row img {
+    width: 150px;
+    height: 47px;
+    margin: 10px;
+    border-radius:20%;
+
+}
+
+.bonus_images {
+    display: flex;
+}
+
+.bonus_images img {
+    height: 130px;
+    margin: 5px;
+    margin-top: 10px;
+}
+
+@keyframes rotation
+{
+    100% {
+        transform: rotate(360deg);
     }
-
-}
+} 
