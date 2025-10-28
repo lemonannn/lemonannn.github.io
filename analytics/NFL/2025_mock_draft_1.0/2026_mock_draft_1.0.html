@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2026 Mock Draft 1.0</title>
+    <link rel="stylesheet" href="../../css/article_format.css">
+</head>
+
+<body>
+
+<div class = "top_bar">
+    <div class = "content">
+        <a class="home_icon" href="#home">Homer</a>
+        <nav>
+            <a href="#sports">Sports</a>
+            <a href="#ml">ML</a>
+            <a href="#programming">Programming</a>
+        </nav>
+    </div>
+</div>
+
+<div class = "article_box">
+
+<div class = "title">
+    Jack Kruger's 2026 NFL Mock Draft 1.0
+</div>
+
+<!-- <div class = "header_vid">
+    
+</div> -->
+
+<div class = "header_image">
+    <img src="images/temp_headline.png" alt="mock 1.0 2026"></a>
+</div>
+
+<div class = "article_words">
+
+    <div class = "opening">
+        Welcome to my first written mock draft of all time! I did this mostly because I wanted to write and I thought it would be a good exercise to better understand the players in this year's class, but it was a ton of fun and I want to do more of these moving forward. As it's my first one, the actual explanations started off pretty shaky but solidified as the draft went on, so trust me in that it gets better the more you read. Last, the draft order I used was based on the records after last week. I wanted to get this out earlier, but it took a little longer than I was anticipating. Either way, have fun reading through it, and 2.0 will probably happen in a few weeks.
+    </div>
+
+    <div id = "pick_list">
+
+    </div>
+
+    <div class = "closing">
+        This class has a lot of interesting players, and most of the first round guys have solidified themselves as we're getting closer to the end of the season. Right now, quarterback is still the most intriguing position to me. I need to do a deeper delve into the tape, but I've got six quarterbacks that have a legitimate chance to go in the first if they decide to declare: Simpson, Moore, Mendoza, Brendan Sorsby, LaNorris Sellers, and Darian Mensah. Aside from that, I'm fairly certain about my top ten or so players, but after that my selections had more to do with team fit than anything else. I'm looking forward to seeing what things change in the next few weeks, and I'm even more excited to see which lower round players start to emerge as interesting options closer to the draft. 
+    </div>
+
+</div>
+
+
+</div>
+
+
+</body>
+
+<script>
+    fetch('draft_data/draft_info.json')
+        .then(res => res.json())
+        .then(picks => {
+            var pick_num = 1;
+            const pick_list = document.getElementById('pick_list');
+            for (let i = 1; i <= picks.length; ++i) {
+            pick = picks[i-1];
+                const item = document.createElement('div');
+                item.innerHTML = `
+                    <div class = "pick">
+                        <div class = "pick_header">
+
+                        <div class = "team_logo">
+                            <img src="../images/nfl_logos/${pick.team}.png" alt="${pick.team}"></a>
+                        </div>
+
+                        <div class = "team_name">
+                            ${i + ". " + pick.team}
+                        </div>
+
+                        </div>
+                        <div class = "player_info">
+                            <span class = "player_name">${pick.name}</span>, ${pick.position}, ${pick.college}
+                        </div>
+                        <div class = "pick_body">
+                            ${pick.body}
+                        </div>
+                    </div>
+                `
+                pick_list.appendChild(item);
+            }
+        });
+</script>
+
+</html>
