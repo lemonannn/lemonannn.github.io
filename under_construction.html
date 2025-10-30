@@ -3,14 +3,15 @@
 
 <head>
     <title>Me When Aidan Hutchinson Gets a Sack: :o</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/homepage_format.css">
 </head>
 
 <body>
 
-
-<a href="/analytics/lppm.html">LPPM: Attempting to Identify Breakout Players with Baseball Savant's Individual Pitch Metrics</a>
-<a href="/analytics/NFL/2025_mock_draft_1.0/2026_mock_draft_1.0.html">linky</a>
+<br>
+<br>
+<br>
+<br>
 
 <div class = "under_construction">
     <h1>You: </h1>
@@ -27,5 +28,15 @@
 
 
 </body>
+
+<div id="home_link"></div>
+
+<script>
+fetch('../home_link.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('home_link').innerHTML = html;
+  });
+</script>
 
 </html>

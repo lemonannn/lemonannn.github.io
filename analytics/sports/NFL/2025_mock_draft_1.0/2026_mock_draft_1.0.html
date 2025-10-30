@@ -1,28 +1,21 @@
+permalink: /mock-draft-2026-1.0
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>2026 Mock Draft 1.0</title>
-    <link rel="stylesheet" href="../../css/article_format.css">
+    <link rel="stylesheet" href="../../../css/article_format.css">
 </head>
 
 <body>
 
-<div class = "top_bar">
-    <div class = "content">
-        <a class="home_icon" href="#home">Homer</a>
-        <nav>
-            <a href="#sports">Sports</a>
-            <a href="#ml">ML</a>
-            <a href="#programming">Programming</a>
-        </nav>
-    </div>
-</div>
+<div id="navbar"></div>
 
 <div class = "article_box">
 
 <div class = "title">
-    Jack Kruger's 2026 NFL Mock Draft 1.0
+    Lemonan's 2026 NFL Mock Draft 1.0
 </div>
 
 <!-- <div class = "header_vid">
@@ -88,6 +81,14 @@
                 pick_list.appendChild(item);
             }
         });
+</script>
+
+<script>
+fetch('../../../navbar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
+  });
 </script>
 
 </html>

@@ -1,0 +1,10 @@
+body {
+    background-color: whitesmoke;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 140%;
+}
+
+.links {
+    margin-top: 7%;
+}

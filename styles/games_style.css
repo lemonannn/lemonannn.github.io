@@ -130,14 +130,6 @@ footer {
     border-radius:20%;
 }
 
-.home_link img {
-    width: 100px;
-    height: auto;
-    position: fixed;
-    left: 0;
-    top: 0;
-}
-
 .temp_text {
     margin-top: 100px;
 }

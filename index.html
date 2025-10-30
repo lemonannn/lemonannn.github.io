@@ -22,31 +22,31 @@
 <div class = "linky_bar">
 
     <div class = "linky_bar_text">
-        <a href="/analytics/analytics.html">analytics</a>
+        <a href="/analytics/">analytics</a>
     </div>
     <div class = linky_bar_text>
         |
     </div>
     <div class = "linky_bar_text">
-        <a href="/games/games.html">games</a>
+        <a href="/games/">games</a>
     </div>
     <div class = linky_bar_text>
         |
     </div>
     <div class = "linky_bar_text">
-        <a href="/writing/writing.html">writing</a>
+        <a href="/writing/">writing</a>
     </div>
     <div class = linky_bar_text>
         |
     </div>
     <div class = "linky_bar_text">
-        <a href="/drawing/drawing.html">drawing</a>
+        <a href="/drawing/">drawing</a>
     </div>
     <div class = linky_bar_text>
         |
     </div>
     <div class = "linky_bar_text">
-        <a href="/music/music.html">music</a>
+        <a href="/music/">music</a>
     </div>
     <div class = linky_bar_text>
         |
@@ -201,7 +201,7 @@
     fetch('/data/projects.json')
         .then(res => res.json())
         .then(projects => {
-            var max_recent_projects = 3;
+            var max_recent_projects = 4;
             var i = 0;
             var num_recent_projects = 0;
             const recent_projects = document.getElementById('project_list');
@@ -228,12 +228,18 @@
   const scrollAmount = 490;
 
   btnLeft.addEventListener('click', () => {
-    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  carousel.scrollTo({
+    left: carousel.scrollLeft - scrollAmount,
+    behavior: 'smooth'
   });
+});
 
-  btnRight.addEventListener('click', () => {
-    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+btnRight.addEventListener('click', () => {
+  carousel.scrollTo({
+    left: carousel.scrollLeft + scrollAmount,
+    behavior: 'smooth'
   });
+});
 </script>
 
 <script>

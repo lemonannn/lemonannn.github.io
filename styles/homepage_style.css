@@ -179,7 +179,7 @@ body {
     color: white;
     margin: 20px;
     width: 490px;
-    height: 200px;
+    height: 280px;
     text-align: center;
     font-size: 15px;
 }
@@ -212,7 +212,9 @@ body {
 
 #project_list img {
     width: 490px;
+    height: 280px;
     display: block;
+    margin: 0;
 }
 
 #project_list figcaption {
