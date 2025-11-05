@@ -5,7 +5,7 @@ permalink: /mock-draft-2026-1.0
 
 <head>
     <title>2026 Mock Draft 1.0</title>
-    <link rel="stylesheet" href="../../../css/article_format.css">
+    <link rel="stylesheet" href="/analytics/css/article_format.css">
 </head>
 
 <body>
@@ -62,7 +62,7 @@ permalink: /mock-draft-2026-1.0
                         <div class = "pick_header">
 
                         <div class = "team_logo">
-                            <img src="../images/nfl_logos/${pick.team}.png" alt="${pick.team}"></a>
+                            <img src="/analytics/images/nfl_logos/${pick.team}.png" alt="${pick.team}"></a>
                         </div>
 
                         <div class = "team_name">
@@ -84,7 +84,7 @@ permalink: /mock-draft-2026-1.0
 </script>
 
 <script>
-fetch('../../../navbar.html')
+fetch('/analytics/navbar.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('navbar').innerHTML = data;
