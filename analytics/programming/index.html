@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Me When Aidan Hutchinson Gets a Sack: :o</title>
+    <link rel="stylesheet" href="/analytics/css/homepage_format.css">
+</head>
+
+<body>
+
+  <div id="navbar"></div>
+
+
+  <div id = "article_list">
+
+  </div>
+
+
+</body>
+
+<div id="home_link"></div>
+
+<script src="/analytics/article_loader.js"></script>
+
+<script>
+  load_articles("programming");
+</script>
+
+<script>
+fetch('/home_link.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('home_link').innerHTML = html;
+  });
+</script>
+
+<script>
+fetch('/analytics/navbar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
+  });
+</script>
+
+</html>

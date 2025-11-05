@@ -1,16 +1,20 @@
 [
   {
-    "name": "Lemonan Player Pitching Model",
-    "type": "analytics",
-    "image": "lppm.webp",
-    "link": "/analytics/lppm.html",
+    "name": "Lemonan's 2026 Mock Draft 1.0",
+    "type": "sports",
+    "image": "mock 1.0 2026.png",
+    "link": "/analytics/sports/NFL/2025_mock_draft_1.0/2026_mock_draft_1.0.html",
+    "blurb": "Lemonan releases his first written mock draft of the season. Some players will go high, some will go low, and some may not go at all!",
+    "display": "double",
     "completed": true
   },
   {
-    "name": "Lemonan's 2026 Mock Draft 1.0",
-    "type": "analytics",
-    "image": "mock 1.0 2026.png",
-    "link": "analytics/sports/NFL/2025_mock_draft_1.0/2026_mock_draft_1.0.html",
+    "name": "Lemonan Player Pitching Model",
+    "type": "sports",
+    "image": "lppm.webp",
+    "link": "/analytics/lppm.html",
+    "blurb": "A new model designed towards finding undervalued pitchers in the current scope of the MLB. Is it effective enough to be a usable metric for MLB teams?",
+    "display": "double",
     "completed": true
   },
   {
@@ -18,6 +22,15 @@
     "type": "games",
     "image": "dtpa.png",
     "link": "https://rafesymonds.itch.io/drawn-together-pulled-apart",
+    "completed": true
+  },
+  {
+    "name": "SHLIME: Foiling adversarial attacks fooling SHAP and LIME",
+    "type": "machine learning",
+    "image": "shlime.png",
+    "link": "https://arxiv.org/abs/2508.11053",
+    "blurb": "I co-authored this machine learning research paper! My role was as a member of the team implementing the model, the lead of the team that analyzed our results and created the finalized figures, and co-led the authoring and editing process of the paper itself.",
+    "display": "single",
     "completed": true
   },
   {

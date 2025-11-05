@@ -8,35 +8,23 @@
 
 <body>
 
-<div id="navbar"></div>
+  <div id="navbar"></div>
 
-<div class = "links">
 
-<a href="/analytics/lppm.html">LPPM: Attempting to Identify Breakout Players with Baseball Savant's Individual Pitch Metrics</a>
-<br>
-<a href="/analytics/sports/NFL/2025_mock_draft_1.0/2026_mock_draft_1.0.html">Lemonan's 2026 NFL Mock Draft 1.0</a>
-<br>
-I co-authored an officially published research paper! Here it is:
-<a href="https://arxiv.org/abs/2508.11053">SHLIME: Foiling adversarial attacks fooling SHAP and LIME</a>
-</div>
+  <div id = "article_list">
 
-<div class = "under_construction">
-    <h1>You: </h1>
-    <span>This webpage is boring</span>
-
-    <h2>Me: </h2>
-    <div class = "construction_gifs">
-        <img src = ../construction_images/construction1.gif>
-        <img src = ../construction_images/construction3.gif>
-        <img src = ../construction_images/construction4.gif>
-    </div>
-
-</div>
+  </div>
 
 
 </body>
 
 <div id="home_link"></div>
+
+<script src="article_loader.js"></script>
+
+<script>
+  load_articles("all");
+</script>
 
 <script>
 fetch('../home_link.html')

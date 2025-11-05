@@ -3,25 +3,39 @@
 
 <head>
     <title>Me When Aidan Hutchinson Gets a Sack: :o</title>
-    <link rel="stylesheet" href="../css/homepage_format.css">
+    <link rel="stylesheet" href="/analytics/css/homepage_format.css">
 </head>
 
 <body>
 
-<div id="navbar"></div>
+  <div id="navbar"></div>
 
-<div class = "links">
 
-I co-authored an officially published research paper! Here it is:
-<a href="https://arxiv.org/abs/2508.11053">SHLIME: Foiling adversarial attacks fooling SHAP and LIME</a>
+  <div id = "article_list">
 
-</div>
+  </div>
 
 
 </body>
 
+<div id="home_link"></div>
+
+<script src="/analytics/article_loader.js"></script>
+
 <script>
-fetch('../navbar.html')
+  load_articles("machine learning");
+</script>
+
+<script>
+fetch('/home_link.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('home_link').innerHTML = html;
+  });
+</script>
+
+<script>
+fetch('/analytics/navbar.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('navbar').innerHTML = data;

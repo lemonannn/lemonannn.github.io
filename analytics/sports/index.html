@@ -3,26 +3,39 @@
 
 <head>
     <title>Me When Aidan Hutchinson Gets a Sack: :o</title>
-    <link rel="stylesheet" href="../css/homepage_format.css">
+    <link rel="stylesheet" href="/analytics/css/homepage_format.css">
 </head>
 
 <body>
 
-<div id="navbar"></div>
+  <div id="navbar"></div>
 
-<div class = "links">
 
-<a href="/analytics/lppm.html">LPPM: Attempting to Identify Breakout Players with Baseball Savant's Individual Pitch Metrics</a>
-<br>
-<a href="/analytics/sports/NFL/2025_mock_draft_1.0/2026_mock_draft_1.0.html">Lemonan's 2026 NFL Mock Draft 1.0</a>
+  <div id = "article_list">
 
-</div>
+  </div>
 
 
 </body>
 
+<div id="home_link"></div>
+
+<script src="/analytics/article_loader.js"></script>
+
 <script>
-fetch('../navbar.html')
+  load_articles("sports");
+</script>
+
+<script>
+fetch('/home_link.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('home_link').innerHTML = html;
+  });
+</script>
+
+<script>
+fetch('/analytics/navbar.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('navbar').innerHTML = data;

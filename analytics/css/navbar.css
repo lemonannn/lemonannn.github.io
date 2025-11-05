@@ -1,5 +1,4 @@
 body {
-    background-color: whitesmoke;
     background-size: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 140%;
@@ -7,7 +6,7 @@ body {
 
 .top_bar {
   width: 100%;
-  background-color: #1e1e1e; /* dark background */
+  background: linear-gradient(135deg, #fee02b, #fcf8ed);
   color: white;
   padding: 0px 0;
   position: fixed; /* optional: sticks to top */
@@ -19,7 +18,7 @@ body {
 /* Center and limit inner content width */
 .top_bar .content {
     height: 20%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px; /* spacing inside */
     display: flex;
@@ -28,10 +27,12 @@ body {
 }
 
 .home_icon {
+    position: relative;
     color: white;
     text-decoration: none;
     padding: 12px 40px;
     background: #333;
+    left: 5%;
 }
 
 .home_icon:hover {
