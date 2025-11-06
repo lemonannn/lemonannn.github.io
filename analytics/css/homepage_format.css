@@ -1,5 +1,5 @@
 body {
-    background-color: whitesmoke;
+    background-color: #E7EEFB;
     background-size: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 140%;
@@ -101,4 +101,11 @@ body {
 
 .links {
     margin-top: 7%;
+}
+
+footer {
+    margin-top: 5%;
+    background-color: #C5CBD6 !important;
+    color: white;
+    text-align: center;
 }

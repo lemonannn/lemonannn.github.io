@@ -43,7 +43,7 @@ body {
 
 .linky_bar {
     display: flex;
-    width: 1000px;
+    width: 700px;
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
@@ -228,7 +228,7 @@ body {
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: normal;
     font-style: italic;
     text-align: center;

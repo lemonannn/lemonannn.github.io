@@ -10,12 +10,10 @@
 
   <div id="navbar"></div>
 
+  <div id = "article_list"></div>
 
-  <div id = "article_list">
-
-  </div>
-
-
+  <div id="footer"></div>
+  
 </body>
 
 <div id="home_link"></div>
@@ -39,6 +37,14 @@ fetch('/analytics/navbar.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('navbar').innerHTML = data;
+  });
+</script>
+
+<script>
+fetch('/footer.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('footer').innerHTML = html;
   });
 </script>
 

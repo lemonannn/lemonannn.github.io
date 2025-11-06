@@ -3,11 +3,33 @@
 
 <head>
     <title>A Writing a Day Keeps the Doctor Away</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/homepage_style.css">
 </head>
 
 <body>
 
+    <iframe src="https://drive.google.com/embeddedfolderview?id=1KQl55AKE66wX_xE_fZZFfzlPSE9LzNyp#grid" style="width: 100%; height: 600px; border: 0;"></iframe>
+
+    <div id="home_link"></div>
+
+    <div id="footer"></div>
+
+    <script>
+    fetch('../home_link.html')
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById('home_link').innerHTML = html;
+    });
+    </script>
+
 </body>
+
+<script>
+fetch('/footer.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('footer').innerHTML = html;
+  });
+</script>
 
 </html>

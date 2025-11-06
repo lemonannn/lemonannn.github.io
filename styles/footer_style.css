@@ -1,0 +1,18 @@
+footer {
+    background-color: #F0F0A3;
+    color: white;
+    text-align: center;
+}
+
+.contact_row {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.contact_row img {
+    width: 150px;
+    height: 47px;
+    margin: 10px;
+    border-radius:20%;
+}
