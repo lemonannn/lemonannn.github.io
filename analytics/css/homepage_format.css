@@ -9,11 +9,11 @@ body {
     width: 50%;
     position: relative;
     background-color: white;
-    top: 50px;
+    top: 5%;
     margin: 0 auto;
-    margin-bottom: 20px;
-    border-left: 10px solid #FBF963;
-    border-radius: 20px;
+    margin-bottom: 2%;
+    border-left: 1% solid #FBF963;
+    border-radius: 2%;
 }
 
 .article_group a {
@@ -29,9 +29,9 @@ body {
 .divider {
     position: relative;
     width: 50%;
-    height: 5px; /* thickness of the top border */
+    height: 0.5%;
     background: linear-gradient(to left, #fec122, #FBF963);
-    margin: 10px auto;
+    margin: 1% auto;
 }
 
 .big_article {
@@ -39,53 +39,52 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    margin-top: 0px;
+    margin-top: 0%;
 }
 
 .big_article img {
-    padding-left: 5px;
-    padding-left: 5px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    padding-left: 0.5%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
 }
 
 .big_article .text_box {
-    padding: 20px;
+    padding: 2%;
 }
 
 .big_article .headline {
     font-size: 25px;
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 0.5%;
 }
 
 .big_article .blurb {
     font-size: 16px;
     color: gray;
-    margin-top: 20px;
+    margin-top: 2%;
 }
 
 .small_article {
     display: flex;
     flex-direction: row;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    padding: 1%;
 }
 
 .small_article img {
     width: 30%;
-    height: 17.14%;
+    height: auto;
     border-top-right-radius: 0%;
     border-bottom-right-radius: 0%;
 }
 
 .small_article .text_box {
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 0.5%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .small_article .headline {
@@ -96,7 +95,7 @@ body {
 .small_article .blurb {
     font-size: 12px;
     color: gray;
-    margin-top: 10px;
+    margin-top: 1%;
 }
 
 .links {
