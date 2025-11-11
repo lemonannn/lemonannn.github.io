@@ -12,7 +12,7 @@ body {
     top: 5%;
     margin: 0 auto;
     margin-bottom: 2%;
-    border-left: 1% solid #FBF963;
+    border-left: 10px solid #FBF963;
     border-radius: 2%;
 }
 
@@ -29,7 +29,7 @@ body {
 .divider {
     position: relative;
     width: 50%;
-    height: 0.5%;
+    height: 10px;
     background: linear-gradient(to left, #fec122, #FBF963);
     margin: 1% auto;
 }
