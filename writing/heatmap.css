@@ -1,0 +1,19 @@
+#heatmap {
+  display: grid;
+  grid-template-columns: repeat(53, 12px); /* 52 weeks + 1 for spacing */
+  grid-gap: 3px;
+}
+
+.day {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background-color: #ebedf0; /* default = no exercise */
+  cursor: pointer;
+}
+
+.day[data-minutes="0"] { background-color: yellow; }
+.day[data-minutes="1-10"] { background-color: #c6e48b; }
+.day[data-minutes="11-30"] { background-color: #7bc96f; }
+.day[data-minutes="31-60"] { background-color: #239a3b; }
+.day[data-minutes="61+"] { background-color: #196127; }

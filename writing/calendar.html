@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <link rel="stylesheet" href="/writing/heatmap.css">
+  <style>
+    #calendar {
+      max-width: 900px;
+      margin: 40px auto;
+    }
+  </style>
+</head>
+<body>
+
+<form id="logForm" style="max-width: 400px; margin: 20px auto;">
+  <h3>Add Words Written</h3>
+  <label>Date:</label>
+  <input type="date" id="dateInput" required>
+  <br><br>
+  <label>Words:</label>
+  <input type="number" id="wordsInput" min="0" required>
+  <br><br>
+  <button type="submit">Log</button>
+</form>
+
+<div id="heatmap">
+</div>
+<div id="calendar">help!</div>
+
+<script type="module">
+  import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm"
+
+  // ✏️ INSERT YOUR KEYS HERE
+  const supabaseUrl = "https://znyahcquvlpudhfnukgi.supabase.co"
+  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpueWFoY3F1dmxwdWRoZm51a2dpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjMxMjA4MjIsImV4cCI6MjA3ODY5NjgyMn0.AXop0rXwvRdugrXEwdTYaTHDeDWBEBUpCLW1rH7lwoE"
+  const supabase = createClient(supabaseUrl, supabaseKey)
+
+  // ---------- FETCH WORDS DATA ----------
+async function fetchWords() {
+  // fetch all rows from 'writing_words'
+  const { data, error } = await supabase
+    .from("writing_words")
+    .select("*"); // all columns
+
+  if (error) {
+    console.error("Error fetching writing_words:", error);
+    return {};
+  }
+
+  // convert to a dictionary of date => minutes
+  const result = {};
+  data.forEach(item => {
+    result[item.date] = item.words;
+  });
+
+  return result;
+}
+
+// ---------- GENERATE HEATMAP ----------
+function generateHeatmap(data) {
+  const heatmap = document.getElementById("heatmap");
+  heatmap.innerHTML = "";
+
+  const today = new Date();
+  const start = new Date();
+  start.setFullYear(today.getFullYear() - 1);
+
+  for (let d = new Date(start); d <= today; d.setDate(d.getDate() + 1)) {
+    const dateStr = d.toISOString().split("T")[0];
+    const words = data[dateStr] || 0;
+
+    const dayDiv = document.createElement("div");
+    dayDiv.classList.add("day");
+    dayDiv.dataset.date = dateStr;
+    dayDiv.dataset.words = words;
+
+    // set color
+    if (words === 0) dayDiv.style.backgroundColor = "#ebedf0";
+    else if (words <= 10) dayDiv.style.backgroundColor = "#c6e48b";
+    else if (words <= 30) dayDiv.style.backgroundColor = "#7bc96f";
+    else if (words <= 60) dayDiv.style.backgroundColor = "#239a3b";
+    else dayDiv.style.backgroundColor = "#196127";
+
+    dayDiv.title = `${dateStr}: ${words} words`;
+
+    // editable if key unlocked
+    dayDiv.addEventListener("click", async () => {
+      if (!true) { alert("Enter edit key first!"); return; }
+      let newWords = prompt(`Enter words for ${dateStr}:`, words);
+      if (newWords === null) return;
+      newWords = parseInt(newWords);
+      if (isNaN(newWords) || newWords < 0) { alert("Invalid number"); return; }
+
+      const { error } = await supabase
+    .from("writing_words")
+    .upsert([{ date: dateStr, words: newWords }], { onConflict: "date" })
+
+  if (error) {
+    alert("Error: " + error.message)
+  } else {
+    alert("Saved!")
+    location.reload()
+  }
+        data[dateStr] = newWords;
+        generateHeatmap(data);
+    });
+
+    heatmap.appendChild(dayDiv);
+  }
+}
+
+// ---------- INITIAL LOAD ----------
+fetchWords().then(generateHeatmap);
+
+
+// Auto-fill date with today's date
+document.addEventListener("DOMContentLoaded", () => {
+  const today = new Date().toISOString().split("T")[0]
+  document.getElementById("dateInput").value = today
+})
+
+
+document.getElementById("logForm").addEventListener("submit", async (e) => {
+  e.preventDefault()
+
+  const date = document.getElementById("dateInput").value
+  const words = parseInt(document.getElementById("wordsInput").value)
+
+  const { error } = await supabase
+    .from("writing_words")
+    .upsert([{ date, words }], { onConflict: "date" })
+
+  if (error) {
+    alert("Error: " + error.message)
+  } else {
+    alert("Saved!")
+    location.reload()
+  }
+})
+
+
+</script>
+
+</body>
+</html>
