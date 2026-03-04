@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>College Coaching Analysis</title>
+    <link rel="stylesheet" href="/analytics/css/article_format.css">
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<div class = "article_box">
+
+<div class = "title">
+    Lemonan's College Coaching Analysis
+</div>
+
+<div class = "article_words full_width">
+
+  <div class = "analysis_single right">
+
+    <div class = "analysis_quote">
+      "Fired? We'll Take Him."
+    </div>
+
+    <div class = "analysis_title">
+      The 'Franklin'
+    </div>
+
+    <div class = "graph">
+      <img src = "images/franklin_graph.png" alt="coach_BLANK_graph">
+    </div>
+
+    <div class = "analysis_words">
+
+    </div>
+
+    <div class = "analysis_pic">
+      <img src = "images/franklin.png" alt="coach_BLANK_pic">
+    </div>
+
+  </div>
+
+  <div class = "analysis_single left">
+
+    <div class = "analysis_quote">
+      "Fired? We'll Take Him."
+    </div>
+
+    <div class = "analysis_title">
+      The 'Franklin'
+    </div>
+
+    <div class = "graph">
+      <img src = "images/franklin_graph.png" alt="coach_BLANK_graph">
+    </div>
+
+    <div class = "analysis_words">
+
+    </div>
+
+    <div class = "analysis_pic">
+      <img src = "images/franklin.png" alt="coach_BLANK_pic">
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</body>
+
+<script>
+fetch('/analytics/navbar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
+  });
+</script>
+
+<script>
+  const elements = document.querySelectorAll('.analysis_pic');
+
+  const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      // optional: stop observing after it appears
+      observer.unobserve(entry.target);
+    }
+  });
+  });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+
+</html>

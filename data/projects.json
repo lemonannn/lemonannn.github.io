@@ -1,5 +1,14 @@
 [
   {
+    "name": "Lemonan's College Coaching Analysis",
+    "type": "sports",
+    "image": "mock 1.0 2026.png",
+    "link": "/analytics/sports/NCAAF/college_coaching_analysis",
+    "blurb": "Hiring a head coach at the college level is as prevelent as ever before with the evolution of the game. Even so, teams are doing it completely wrong.",
+    "display": "single",
+    "completed": false
+  },
+  {
     "name": "Lemonan's 2026 Mock Draft 1.0",
     "type": "sports",
     "image": "mock 1.0 2026.png",
