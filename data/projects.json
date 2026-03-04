@@ -1,11 +1,20 @@
 [
   {
+    "name": "Predicting NFL Draft Slot with Production For College Recievers",
+    "type": "sports",
+    "image": "nabers.jpg",
+    "link": "/analytics/sports/NFL/receiving_value",
+    "blurb": "Drafting the right player in the NFL draft is vital. Can we use machine learning to determine where any given reciever should be taken?",
+    "display": "double",
+    "completed": false
+  },
+  {
     "name": "Lemonan's College Coaching Analysis",
     "type": "sports",
-    "image": "mock 1.0 2026.png",
+    "image": "franklin.png",
     "link": "/analytics/sports/NCAAF/college_coaching_analysis",
     "blurb": "Hiring a head coach at the college level is as prevelent as ever before with the evolution of the game. Even so, teams are doing it completely wrong.",
-    "display": "single",
+    "display": "double",
     "completed": false
   },
   {
