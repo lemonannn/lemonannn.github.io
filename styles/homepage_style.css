@@ -296,3 +296,8 @@ footer {
         transform: rotate(360deg);
     }
 } 
+
+#temp_text {
+    margin: 0 auto;
+    width: 80%;
+}

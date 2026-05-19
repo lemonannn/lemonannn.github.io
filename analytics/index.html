@@ -3,29 +3,23 @@
 
 <head>
     <title>Me When Aidan Hutchinson Gets a Sack: :o</title>
-    <link rel="stylesheet" href="css/homepage_format.css">
+    <link rel="stylesheet" href="/styles/homepage_style.css">
 </head>
 
-<body>
+<div id = "temp_text">
 
-  <div id="navbar"></div>
-
-
-  <div id = "article_list">
-
-  </div>
-
-
-</body>
+</div>
 
 <div id="home_link"></div>
 
 <div id="footer"></div>
 
-<script src="article_loader.js"></script>
-
 <script>
-  load_articles("all");
+fetch('/footer.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('footer').innerHTML = html;
+  });
 </script>
 
 <script>
@@ -37,18 +31,30 @@ fetch('/home_link.html')
 </script>
 
 <script>
-fetch('navbar.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('navbar').innerHTML = data;
-  });
-</script>
+fetch("/data/projects.json")
+  .then(response => response.json())
+  .then(projects => {
+    const container = document.getElementById("temp_text");
 
-<script>
-fetch('/footer.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('footer').innerHTML = html;
+    projects.forEach(project => {
+      const projectHTML = `
+        <div>
+        <p>
+          <a href="${project.link}">${project.name}</a><br>
+          ${project.blurb}
+        </p>
+        <div>
+      `;
+    
+      if (project.display) {
+
+      container.innerHTML += projectHTML;
+
+      }
+    });
+  })
+  .catch(error => {
+    console.error("Error loading JSON:", error);
   });
 </script>
 

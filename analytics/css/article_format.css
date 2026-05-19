@@ -1,5 +1,5 @@
 body {
-    background-color: whitesmoke;
+    background-color: #F0F0A3;
     background-size: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 140%;
@@ -10,7 +10,7 @@ body {
     margin: 4% auto;
     background-color: white;
     width: 70%;
-    border-left: 10px solid #FBF963;
+    border-left: 10px solid #ffffae;
 }
 
 .title {
@@ -20,6 +20,7 @@ body {
     font-size: 40px;
     width: 90%;
     font-weight: bold;
+    line-height: 1.2;
 }
 
 .header_image {

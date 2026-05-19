@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSV Table Display</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .table-container {
+    max-height: 400px;
+    overflow: auto;
+    border: 1px solid #ccc;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 600px;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+    position: sticky;
+    top: 0; /* Keep header fixed while scrolling */
+  }
+
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  tr:hover {background-color: #ddd;}
+</style>
+</head>
+<body>
+
+<h2>Results</h2>
+
+<div class="table-container">
+  <table id="csvTable">
+    <thead></thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+</body>
+</html>

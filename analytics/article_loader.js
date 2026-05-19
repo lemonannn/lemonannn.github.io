@@ -3,16 +3,29 @@ function load_articles(type) {
     fetch('/data/projects.json')
         .then(res => res.json())
         .then(articles => {
+            let used_articles = []
             const article_list = document.getElementById('article_list');
             for (let i = 1; i <= articles.length; ++i) {
+
+
+                if (!used_articles.includes(i)) {
+                console.log('passed' + i)
+
+
                 article = articles[i-1];
                 const item = document.createElement('div');
                 item.classList.add("article_group");
-                if (type == 'all' || article.type == type) {
+                if (type == 'all' || article.types.includes(type)) {
                     if (article.display == "double") {
                         // get second article and increment
-                        article2 = articles[i];
-                        ++i;
+                        for (let j = i; j <= articles.length; ++j) {
+                            article2 = articles[j];
+                            if (type == 'all' || article2.types.includes(type)) {
+                                used_articles.push(j+1)
+                                console.log('added' + j)
+                                break;
+                            }
+                        }
 
                         item.innerHTML = `
 
@@ -51,7 +64,7 @@ function load_articles(type) {
                     article_list.appendChild(item);
 
                     }
-                    else if (article.type == "games") {
+                    else if (article.types.includes("games")) {
                         item.innerHTML = "";
                     }
                     else if (article.display == "single") {
@@ -76,6 +89,10 @@ function load_articles(type) {
                         article_list.appendChild(item);
                     }
                 }
+
+
+                }
+
             }
         });
 }
