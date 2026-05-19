@@ -92,8 +92,9 @@ body {
 }
 
 .article_words.full_width {
-    padding: 0;
+    width: 80%;
 }
+
 
 .analysis_single.right  {
     background-color:whitesmoke;
