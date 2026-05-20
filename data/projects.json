@@ -1,5 +1,14 @@
 [
   {
+    "name": "Lemonan's College Coaching Analysis",
+    "types": ["sports"],
+    "image": "franklin.png",
+    "link": "/analytics/sports/NCAAF/college_coaching_analysis",
+    "blurb": "Hiring a head coach at the college level is as prevelent as ever before with the evolution of the game. Even so, teams are doing it completely wrong. RECOMMENDED!!! THIS IS GOOD!!!",
+    "display": "double",
+    "completed": true
+  },
+  {
     "name": "Predicting NFL Draft Slot with Recieving Production",
     "types": ["sports", "machine learning"],
     "image": "nabers.jpg",
@@ -9,13 +18,20 @@
     "completed": false
   },
   {
-    "name": "Lemonan's College Coaching Analysis",
-    "types": ["sports"],
-    "image": "franklin.png",
-    "link": "/analytics/sports/NCAAF/college_coaching_analysis",
-    "blurb": "Hiring a head coach at the college level is as prevelent as ever before with the evolution of the game. Even so, teams are doing it completely wrong. RECOMMENDED!!! THIS IS GOOD!!!",
-    "display": "double",
-    "completed": false
+    "name": "SHLIME: Foiling adversarial attacks fooling SHAP and LIME",
+    "types": ["machine learning"],
+    "image": "shlime.png",
+    "link": "https://arxiv.org/abs/2508.11053",
+    "blurb": "I co-authored this machine learning research paper! My role was as a member of the team implementing the model, the lead of the team that analyzed our results and created the finalized figures, and co-led the authoring and editing process of the paper itself.",
+    "display": "single",
+    "completed": true
+  },
+  {
+    "name": "Drawn Together, Pulled Apart",
+    "types": ["games"],
+    "image": "dtpa.png",
+    "link": "https://rafesymonds.itch.io/drawn-together-pulled-apart",
+    "completed": true
   },
   {
     "name": "Lemonan's 2026 Mock Draft 1.0",
@@ -33,22 +49,6 @@
     "link": "/analytics/lppm.html",
     "blurb": "A new model designed towards finding undervalued pitchers in the current scope of the MLB. Is it effective enough to be a usable metric for MLB teams?",
     "display": "double",
-    "completed": true
-  },
-  {
-    "name": "Drawn Together, Pulled Apart",
-    "types": ["games"],
-    "image": "dtpa.png",
-    "link": "https://rafesymonds.itch.io/drawn-together-pulled-apart",
-    "completed": true
-  },
-  {
-    "name": "SHLIME: Foiling adversarial attacks fooling SHAP and LIME",
-    "types": ["machine learning"],
-    "image": "shlime.png",
-    "link": "https://arxiv.org/abs/2508.11053",
-    "blurb": "I co-authored this machine learning research paper! My role was as a member of the team implementing the model, the lead of the team that analyzed our results and created the finalized figures, and co-led the authoring and editing process of the paper itself.",
-    "display": "single",
     "completed": true
   },
   {

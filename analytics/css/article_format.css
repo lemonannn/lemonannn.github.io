@@ -7,9 +7,9 @@ body {
 
 .article_box {
     padding-top: 10px;
-    margin: 4% auto;
+    margin: 0 auto;
     background-color: white;
-    width: 70%;
+    width: 85%;
     border-left: 10px solid #ffffae;
 }
 
@@ -40,6 +40,7 @@ body {
     margin-top: 0;
     padding: 10%;
     padding-top: 0;
+    padding-bottom: 20px;
 }
 
 .opening {
