@@ -1,5 +1,5 @@
 body {
-    background-color: #F0F0A3;
+    background-color: #f0f0a3;
     background-size: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 140%;
@@ -197,9 +197,12 @@ body {
     margin: 0 auto;
     width: 50%;
     height: 40px;
-    background: lightgray;
+    background: #F0F0A3;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
