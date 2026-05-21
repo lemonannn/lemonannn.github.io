@@ -9,15 +9,6 @@
     "completed": true
   },
   {
-    "name": "Predicting NFL Draft Slot with Recieving Production",
-    "types": ["sports", "machine learning"],
-    "image": "nabers.jpg",
-    "link": "/analytics/sports/NFL/receiving_value",
-    "blurb": "Drafting the right player in the NFL draft is vital. Can we use machine learning to determine where any given reciever should be taken?",
-    "display": "double",
-    "completed": false
-  },
-  {
     "name": "SHLIME: Foiling adversarial attacks fooling SHAP and LIME",
     "types": ["machine learning"],
     "image": "shlime.png",
@@ -31,6 +22,15 @@
     "types": ["games"],
     "image": "dtpa.png",
     "link": "https://rafesymonds.itch.io/drawn-together-pulled-apart",
+    "completed": true
+  },
+  {
+    "name": "Predicting NFL Draft Slot with Recieving Production",
+    "types": ["sports", "machine learning"],
+    "image": "nabers.jpg",
+    "link": "/analytics/sports/NFL/receiving_value",
+    "blurb": "Drafting the right player in the NFL draft is vital. Can we use machine learning to determine where any given reciever should be taken?",
+    "display": "double",
     "completed": true
   },
   {
