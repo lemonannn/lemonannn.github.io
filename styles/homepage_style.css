@@ -182,6 +182,7 @@ body {
     height: 280px;
     text-align: center;
     font-size: 15px;
+    position: relative;
 }
 
 .rec_projects_header {
@@ -237,7 +238,7 @@ body {
 
 .carousel-btn {
   position: absolute;
-  transform: translate(0, -200px);
+  transform: translate(0, -330%);
   background-color: rgba(0,0,0,0.5);
   border: none;
   color: white;
@@ -253,11 +254,11 @@ body {
 }
 
 .carousel-btn.left {
-  left: 80px;
+  left: 0px;
 }
 
 .carousel-btn.right {
-  right: 950px;
+  right: 0px;
 }
 
 footer {
