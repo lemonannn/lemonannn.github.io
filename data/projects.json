@@ -1,5 +1,14 @@
 [
   {
+    "name": "The Lemonan Player Pitching Model 2.0",
+    "types": ["sports"],
+    "image": "skubs.webp",
+    "link": "/analytics/sports/MLB/lppm_plus",
+    "blurb": "Predicting pitching breakouts with pitch arsenal data. Currently a work in progress!",
+    "display": "double",
+    "completed": true
+  },
+  {
     "name": "Lemonan's College Coaching Analysis",
     "types": ["sports"],
     "image": "franklin.png",

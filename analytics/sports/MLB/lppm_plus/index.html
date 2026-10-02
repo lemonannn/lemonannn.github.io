@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LPPM PLUS</title>
+    <link rel="stylesheet" href="/analytics/css/article_format.css">
+</head>
+
+<body>
+
+<div class = "article_box">
+
+<div class = "title">
+    The Lemonan Player Pitching Model 2.0
+</div>
+
+<div class = "header_image">
+    <img src="images/skubs.webp" alt="skubs"></a>
+</div>
+
+<div class = "article_words full_width">
+
+<h2>This Article Is Currently In-Progress</h2>
+
+
+</div>
+<a href="https://github.com/lemonannn/lppm_plus">GitHub Repo</a>
+
+</div>
+
+<div id="home_link"></div>
+
+<div id="footer"></div>
+
+</body>
+
+<script>
+fetch('/home_link.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('home_link').innerHTML = html;
+  });
+</script>
+
+<script>
+fetch('/footer.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('footer').innerHTML = html;
+  });
+</script>
+
+</html>
